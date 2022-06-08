@@ -51,7 +51,7 @@ const Navbar = ({ counter, setCounter, details, setDetails }) => {
           {/* {
             details.email=='admin@gmail.com' ? <h4 className="text-light">Admin</h4> : null
           } */}
-          <div style={{ marginRight: -60 }}>
+          <div style={{ marginRight: -250 }}>
             <h5
               className="text-light"
               style={
@@ -70,10 +70,11 @@ const Navbar = ({ counter, setCounter, details, setDetails }) => {
             className="btn btn-outline-light mt-auto d-flex flex-row"
             style={
               currentUrl.split("/")[convertedUrl.length - 1] == "signUp" ||
-              currentUrl.split("/")[convertedUrl.length - 1] == ""
+              currentUrl.split("/")[convertedUrl.length - 1] == "" ||
+              details.email == "admin@gmail.com"
                 ? // (details.email!='Admin' && details.password!='Admin')
-                  { marginRight: -35, marginBottom: 15, visibility: "hidden" }
-                : { marginRight: -35, marginBottom: 15 }
+                  { marginRight: -70, marginBottom: 15, visibility: "hidden" }
+                : { marginRight: -70, marginBottom: 15 }
             }
             to="/cartItems"
           >

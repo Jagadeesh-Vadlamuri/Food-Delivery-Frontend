@@ -22,7 +22,13 @@ const Homepage = ({details, setDetails}) => {
     onSubmit: async (values) => {
       try {
         if(values.email=='admin@gmail.com'){
-          // navigate(`/getItems`)
+          navigate(`/getItems`)
+          setDetails({
+            email: values.email
+          })
+        }
+        if(values.email=='testemail@gmail.com'){
+          navigate(`/getItems`)
           setDetails({
             email: values.email
           })

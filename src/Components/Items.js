@@ -6,7 +6,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
 import LinesEllipsis from "react-lines-ellipsis";
 
-const Items = ({ fdata, datum, counter, setCounter }) => {
+const Items = ({ fdata, datum, counter, setCounter, details, setDetails }) => {
   const URL = "https://food-delivery150.herokuapp.com";
 
   const [cartData, setCartData] = useContext(store);
@@ -89,7 +89,10 @@ const Items = ({ fdata, datum, counter, setCounter }) => {
                   onClick={() => handleDelete(item._id)}
                   style={{ color: "purple", marginLeft: 20 }}
                 >
-                  <DeleteIcon style={{ marginBottom: 10, fontSize: 30 }} />
+                  <DeleteIcon style={details.email !== "admin@gmail.com" ?
+                  { marginBottom: 10, fontSize: 0, visibility: 'hidden' } :
+                  { marginBottom: 10, fontSize: 30 } 
+                  } />
                 </Link>
               </div>
               <div className="d-flex bg-light flex-row ">
