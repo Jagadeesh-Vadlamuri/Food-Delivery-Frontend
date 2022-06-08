@@ -9,7 +9,7 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import { store } from "../App";
 import Popup2 from "./Popup2";
 import "./Popup2.css";
-import Popup3 from "./Popup2";
+import Popup3 from "./Popup3";
 import "./Popup3.css";
 import * as Yup from "yup";
 import PriorityHighIcon from "@mui/icons-material/PriorityHigh";
@@ -40,7 +40,7 @@ const Signup = () => {
             console.log(error);
           }
         );
-        setDetails([...details, [values.fname, values.lname]]);
+        // setDetails([...details, [values.fname, values.lname]]);
         
         var userData = users.filter((user) => values.email == user.email);
         console.log(userData);
